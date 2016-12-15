@@ -1,5 +1,5 @@
 // src/App.js
-
+import $ from 'jquery'
 import Balloon from './Balloon'
 import './App.sass'
 
@@ -8,6 +8,12 @@ export default class App {
     balloonCount: 50,
     score: 0
   }
+
+  static hot = {
+  accept: () => {
+    this.render()
+  }
+}
 
   constructor(props = {}) {
     this.props = Object.assign({}, App.defaults, props)
@@ -33,6 +39,7 @@ export default class App {
   updateScore(poppedBalloon) {
     const points = 100 - poppedBalloon.props.width
     this.props.score += points
+    $('.counter').html(this.props.score);
   }
 
   removeBalloon(index) {
