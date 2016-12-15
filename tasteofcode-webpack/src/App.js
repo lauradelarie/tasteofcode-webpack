@@ -10,10 +10,10 @@ export default class App {
   }
 
   static hot = {
-  accept: () => {
-    this.render()
+    accept: () => {
+      this.render()
+    }
   }
-}
 
   constructor(props = {}) {
     this.props = Object.assign({}, App.defaults, props)
