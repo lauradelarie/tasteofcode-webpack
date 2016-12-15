@@ -1,1 +1,6 @@
-document.write('<h1>Hello, World!</h1>')
+// src/index.js
+
+import App from './App'
+
+const app = new App()
+app.render()
