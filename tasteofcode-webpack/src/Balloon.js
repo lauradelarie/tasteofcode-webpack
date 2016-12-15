@@ -2,6 +2,7 @@
 
 import $ from 'jquery'
 import './Balloon.sass'
+import PopSound from './PopSound'
 
 export default class Balloon {
   static colors = [
@@ -89,6 +90,7 @@ export default class Balloon {
 
   pop() {
     const { index } = this.props
+    PopSound.play()
     this.unmount()
     this.props.onPop(index)
   }
