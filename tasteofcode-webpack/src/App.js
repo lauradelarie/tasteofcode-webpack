@@ -54,4 +54,5 @@ export default class App {
       balloon.mount()
     })
   }
+
 }
